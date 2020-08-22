@@ -43,6 +43,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonStartPresed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sXK-kK-TT3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -63,6 +66,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="greenLight" destination="Wnw-FT-ct3" id="Bad-jC-ney"/>
+                        <outlet property="redLight" destination="bmQ-Dj-rAH" id="ahx-Hu-eMM"/>
+                        <outlet property="startButton" destination="VEQ-La-zGs" id="eTf-S6-tIJ"/>
+                        <outlet property="yellowLight" destination="JFw-Qi-2dh" id="hXe-DT-YGt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
