@@ -31,6 +31,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
      
         startButton.layer.cornerRadius = 10
+        
+        redLight.alpha = lightIsOff
+        yellowLight.alpha = lightIsOff
+        greenLight.alpha = lightIsOff
+        
     }
 
     override func viewWillLayoutSubviews() {
@@ -40,8 +45,25 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonStartPresed(_ sender: Any) {
+        startButton.setTitle("NEXT", for: .normal)
         
+        switch currentLight {
+        case .red:
+            redLight.alpha = lightIsOn
+            greenLight.alpha = lightIsOff
+            currentLight = .yellow
+        case .yellow:
+            redLight.alpha = lightIsOff
+            yellowLight.alpha = lightIsOn
+            greenLight.alpha = lightIsOff
+            currentLight = .green
+        case .green:
+            redLight.alpha = lightIsOff
+            yellowLight.alpha = lightIsOff
+            greenLight.alpha = lightIsOn
+            currentLight = .red
+      
     }
     
 }
-
+}
